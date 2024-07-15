@@ -2,12 +2,12 @@
   {
     "question": "What is the native currency of Etherlink?",
     "answers": ["ETH", "XTZ", "LINK", "BTC"],
-    "correctAnswer": "YlhKZGFw"
+    "correctAnswer": "YlhKZmN4"
   },
   {
     "question": "What does 'XTZ' stand for?",
     "answers": ["Xtra Tezos", "Tezos", "Extended Tezos Zone", "X-Tezos"],
-    "correctAnswer": "YlhKZGFw"
+    "correctAnswer": "YlhKZmN4"
   },
   {
     "question": "What is the Chain ID for Etherlink Mainnet?",
