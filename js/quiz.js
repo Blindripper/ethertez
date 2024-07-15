@@ -25,7 +25,9 @@ function displayQuestion(question) {
         answersDiv.appendChild(button);
     });
     
-    console.log('Correct answer index:', decryptAnswer(question.correctAnswer));
+    console.log('Current Question:', question.question);
+    console.log('Encrypted correct answer:', question.correctAnswer);
+    console.log('Decrypted correct answer index:', decryptAnswer(question.correctAnswer));
 }
 
 function selectAnswer(index) {
@@ -50,8 +52,12 @@ function checkAnswer() {
     const decryptedAnswer = decryptAnswer(currentQuestion.correctAnswer);
     const correct = selectedAnswerIndex === decryptedAnswer;
     
+    console.log('Question:', currentQuestion.question);
     console.log('Selected index:', selectedAnswerIndex);
+    console.log('Selected answer:', currentQuestion.answers[selectedAnswerIndex]);
+    console.log('Encrypted correct answer:', currentQuestion.correctAnswer);
     console.log('Decrypted correct index:', decryptedAnswer);
+    console.log('Correct answer:', currentQuestion.answers[decryptedAnswer]);
     console.log('Is correct:', correct);
     
     if (correct) {
