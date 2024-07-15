@@ -1,12 +1,14 @@
 let currentQuestion = {};
 let score = 0;
 let selectedAnswerIndex = null;
+let questions = [];
+let currentQuestionIndex = 0;
 
 const CIPHER_KEY = 'XYZABCDEFGHIJKLMNOPQRSTUVW';
 
 async function loadQuestions() {
     const response = await fetch('data/questions.json');
-    const questions = await response.json();
+    questions = await response.json();
     return questions;
 }
 
@@ -57,6 +59,10 @@ function checkAnswer() {
         document.getElementById('score-value').textContent = score;
     }
     displayResult(correct);
+    
+    // Move to the next question
+    currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+    displayQuestion(questions[currentQuestionIndex]);
 }
 
 function displayResult(correct) {
@@ -87,5 +93,13 @@ function decryptAnswer(encryptedAnswer) {
     return parseInt(decrypted, 36) - 1;
 }
 
+async function initializeQuiz() {
+    questions = await loadQuestions();
+    if (questions.length > 0) {
+        displayQuestion(questions[currentQuestionIndex]);
+    }
+    document.getElementById('submit-answer').addEventListener('click', checkAnswer);
+}
+
 // Export functions to be used in app.js
-export { loadQuestions, displayQuestion, checkAnswer };
+export { initializeQuiz };
