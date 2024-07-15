@@ -1,5 +1,6 @@
 let currentQuestion = {};
 let score = 0;
+let selectedAnswerIndex = null;
 
 const CIPHER_KEY = 'XYZABCDEFGHIJKLMNOPQRSTUVW';
 
@@ -11,6 +12,7 @@ async function loadQuestions() {
 
 function displayQuestion(question) {
     currentQuestion = question;
+    selectedAnswerIndex = null; // Reset selection for new question
     document.getElementById('question').textContent = question.question;
     const answersDiv = document.getElementById('answers');
     answersDiv.innerHTML = '';
@@ -23,16 +25,23 @@ function displayQuestion(question) {
 }
 
 function selectAnswer(index) {
+    selectedAnswerIndex = index;
     const buttons = document.querySelectorAll('#answers button');
-    buttons.forEach(button => button.classList.remove('selected'));
-    buttons[index].classList.add('selected');
+    buttons.forEach((button, i) => {
+        if (i === index) {
+            button.classList.add('selected');
+        } else {
+            button.classList.remove('selected');
+        }
+    });
 }
 
 function checkAnswer() {
-    const selectedButton = document.querySelector('#answers button.selected');
-    if (!selectedButton) return;
-    const selectedAnswer = Array.from(selectedButton.parentNode.children).indexOf(selectedButton);
-    const correct = selectedAnswer === decryptAnswer(currentQuestion.correctAnswer);
+    if (selectedAnswerIndex === null) {
+        alert("Please select an answer before submitting.");
+        return;
+    }
+    const correct = selectedAnswerIndex === decryptAnswer(currentQuestion.correctAnswer);
     if (correct) {
         score++;
         document.getElementById('score-value').textContent = score;
