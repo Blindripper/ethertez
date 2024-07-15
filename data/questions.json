@@ -2,22 +2,22 @@
   {
     "question": "What is the native currency of Etherlink?",
     "answers": ["ETH", "XTZ", "LINK", "BTC"],
-    "correctAnswer": "X1pCTFJoYg=="
+    "correctAnswer": "YVhndWY="
   },
   {
     "question": "What does 'XTZ' stand for?",
     "answers": ["Xtra Tezos", "Tezos", "Extended Tezos Zone", "X-Tezos"],
-    "correctAnswer": "WEdSVGhOZA=="
+    "correctAnswer": "YVhndWY="
   },
   {
     "question": "What is the Chain ID for Etherlink Mainnet?",
     "answers": ["1", "42793", "56", "137"],
-    "correctAnswer": "WEhKVGhyZg=="
+    "correctAnswer": "YVhpZWo="
   },
   {
     "question": "What technology powers Etherlink's scaling solution?",
     "answers": ["Optimistic Rollups", "ZK Rollups", "Plasma", "Tezos Smart Rollups"],
-    "correctAnswer": "V2xKQ1RHWmw="
+    "correctAnswer": "YnVrbWY="
   },
   {
     "question": "What is a Layer 2 blockchain?",
@@ -27,7 +27,7 @@
       "A type of cryptocurrency",
       "A blockchain explorer"
     ],
-    "correctAnswer": "WEhKVGhyZg=="
+    "correctAnswer": "YVhpZWo="
   },
   {
     "question": "What is the purpose of MEV protection in Etherlink?",
@@ -37,7 +37,7 @@
       "To prevent front-running and other exploits",
       "To improve block validation"
     ],
-    "correctAnswer": "V2xKQ1RHWmw="
+    "correctAnswer": "YnVrbWY="
   },
   {
     "question": "What is the main advantage of a 'non-custodial' solution?",
@@ -47,7 +47,7 @@
       "Users maintain control of their funds",
       "Higher security"
     ],
-    "correctAnswer": "V2xKQ1RHWmw="
+    "correctAnswer": "YnVrbWY="
   },
   {
     "question": "What is the primary benefit of decentralized governance in blockchain networks?",
@@ -57,12 +57,12 @@
       "Community-driven development and upgrades",
       "Increased privacy"
     ],
-    "correctAnswer": "V2xKQ1RHWmw="
+    "correctAnswer": "YnVrbWY="
   },
   {
     "question": "What is the approximate cost per transaction on Etherlink?",
     "answers": ["$0.01", "$0.1", "$0.001", "$1"],
-    "correctAnswer": "V2xKQ1RHWmw="
+    "correctAnswer": "YnVrbWY="
   },
   {
     "question": "What is the block explorer URL for Etherlink Mainnet?",
@@ -72,6 +72,56 @@
       "https://explorer.etherlink.com",
       "https://polygonscan.com"
     ],
-    "correctAnswer": "V2xKQ1RHWmw="
+    "correctAnswer": "YnVrbWY="
+  },
+  {
+    "question": "What is the symbol used for Tezos coins?",
+    "answers": ["TZ", "XTZ", "ꜩ", "TEZ"],
+    "correctAnswer": "YnVrbWY="
+  },
+  {
+    "question": "What consensus mechanism does Tezos use?",
+    "answers": ["Proof of Work", "Proof of Stake", "Liquid Proof of Stake", "Delegated Proof of Stake"],
+    "correctAnswer": "YnVrbWY="
+  },
+  {
+    "question": "What programming language was Tezos primarily developed in?",
+    "answers": ["JavaScript", "Rust", "OCaml", "Python"],
+    "correctAnswer": "YnVrbWY="
+  },
+  {
+    "question": "What is a unique feature of Tezos compared to other blockchains?",
+    "answers": ["Faster transactions", "Lower fees", "Self-amending governance", "Larger block size"],
+    "correctAnswer": "YnVrbWY="
+  },
+  {
+    "question": "What is the name of the smart contract language used in Tezos?",
+    "answers": ["Solidity", "Michelson", "Vyper", "Rust"],
+    "correctAnswer": "YVhpZWo="
+  },
+  {
+    "question": "What is the main advantage of Formal Verification in Tezos?",
+    "answers": ["Faster code execution", "Lower gas fees", "Enhanced code safety", "Easier debugging"],
+    "correctAnswer": "YnVrbWY="
+  },
+  {
+    "question": "When was the Tezos White Paper released?",
+    "answers": ["March 2014", "August 2014", "July 2017", "September 2014"],
+    "correctAnswer": "YnVrbWY="
+  },
+  {
+    "question": "What is the role of the Tezos Foundation?",
+    "answers": ["To control the blockchain", "To manage the Tezos network", "To help the network expand", "To mine new coins"],
+    "correctAnswer": "YnVrbWY="
+  },
+  {
+    "question": "What is a 'baker' in the Tezos ecosystem?",
+    "answers": ["A node operator", "A block creator", "A smart contract developer", "A currency exchanger"],
+    "correctAnswer": "YVhpZWo="
+  },
+  {
+    "question": "What is the purpose of 'cycles' in Tezos?",
+    "answers": ["To measure transaction speed", "To calculate fees", "As a unit of time in the blockchain", "To determine block size"],
+    "correctAnswer": "YnVrbWY="
   }
 ]
