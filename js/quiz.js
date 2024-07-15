@@ -87,13 +87,20 @@ function decryptAnswer(encryptedAnswer) {
     // Step 3: Apply substitution cipher
     let decrypted = '';
     for (let i = 0; i < decoded.length; i++) {
-        let index = CIPHER_KEY.indexOf(decoded[i].toUpperCase());
+        let index = CIPHER_KEY.indexOf(decoded[i]);
         if (index !== -1) {
             decrypted += String.fromCharCode(index + 65);
         } else {
             decrypted += decoded[i];
         }
     }
+    
+    // Step 4: Convert from base 36 and subtract 1 (0-based index)
+    let result = parseInt(decrypted, 36) - 1;
+    
+    // Ensure the result is within the valid range (0-3 for 4 answers)
+    return result >= 0 && result <= 3 ? result : 0;
+}
     
     // Step 4: Convert from base 36 and subtract 1 (0-based index)
     let result = parseInt(decrypted, 36) - 1;
