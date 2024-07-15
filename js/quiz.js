@@ -12,7 +12,7 @@ async function loadQuestions() {
 
 function displayQuestion(question) {
     currentQuestion = question;
-    selectedAnswerIndex = null; // Reset selection for new question
+    selectedAnswerIndex = null;
     document.getElementById('question').textContent = question.question;
     const answersDiv = document.getElementById('answers');
     answersDiv.innerHTML = '';
@@ -23,7 +23,6 @@ function displayQuestion(question) {
         answersDiv.appendChild(button);
     });
     
-    // Debug: Log the correct answer
     console.log('Correct answer index:', decryptAnswer(question.correctAnswer));
 }
 
@@ -38,7 +37,6 @@ function selectAnswer(index) {
         }
     });
     
-    // Debug: Log the selected answer
     console.log('Selected answer index:', index);
 }
 
@@ -50,7 +48,6 @@ function checkAnswer() {
     const decryptedAnswer = decryptAnswer(currentQuestion.correctAnswer);
     const correct = selectedAnswerIndex === decryptedAnswer;
     
-    // Debug: Log comparison details
     console.log('Selected index:', selectedAnswerIndex);
     console.log('Decrypted correct index:', decryptedAnswer);
     console.log('Is correct:', correct);
@@ -58,8 +55,6 @@ function checkAnswer() {
     if (correct) {
         score++;
         document.getElementById('score-value').textContent = score;
-        // Here you would call a function to handle the crypto reward
-        // rewardPlayer(score);
     }
     displayResult(correct);
 }
@@ -89,7 +84,10 @@ function decryptAnswer(encryptedAnswer) {
     }
     
     // Step 4: Convert to number and subtract 1 (0-based index)
-    return parseInt(decrypted, 36) - 1;
+    let result = parseInt(decrypted, 36) - 1;
+    
+    // Ensure the result is within the valid range (0-3 for 4 answers)
+    return isNaN(result) || result < 0 || result > 3 ? 0 : result;
 }
 
 // Export functions to be used in app.js
