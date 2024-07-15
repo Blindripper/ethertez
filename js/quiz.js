@@ -101,13 +101,6 @@ function decryptAnswer(encryptedAnswer) {
     // Ensure the result is within the valid range (0-3 for 4 answers)
     return result >= 0 && result <= 3 ? result : 0;
 }
-    
-    // Step 4: Convert from base 36 and subtract 1 (0-based index)
-    let result = parseInt(decrypted, 36) - 1;
-    
-    // Ensure the result is within the valid range (0-3 for 4 answers)
-    return result >= 0 && result <= 3 ? result : 0;
-}
 
 async function initializeQuiz() {
     questions = await loadQuestions();
