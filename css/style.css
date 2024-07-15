@@ -46,6 +46,29 @@ button:hover {
     background-color: var(--button-hover);
 }
 
+#answers button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+#answers button:hover {
+    background-color: var(--button-hover);
+}
+
+#answers button.selected {
+    background-color: var(--selected-button);
+    color: var(--text-color);
+}
+
 #wallet-info, #quiz-container, #result, #score {
     background-color: var(--secondary-bg);
     padding: 20px;
