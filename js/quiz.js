@@ -75,7 +75,7 @@ function decryptAnswer(encryptedAnswer) {
     // Step 3: Apply substitution cipher
     let decrypted = '';
     for (let i = 0; i < decoded.length; i++) {
-        let index = CIPHER_KEY.indexOf(decoded[i]);
+        let index = CIPHER_KEY.indexOf(decoded[i].toUpperCase());
         if (index !== -1) {
             decrypted += String.fromCharCode(index + 65);
         } else {
@@ -83,11 +83,8 @@ function decryptAnswer(encryptedAnswer) {
         }
     }
     
-    // Step 4: Convert to number and subtract 1 (0-based index)
-    let result = parseInt(decrypted, 36) - 1;
-    
-    // Ensure the result is within the valid range (0-3 for 4 answers)
-    return isNaN(result) || result < 0 || result > 3 ? 0 : result;
+    // Step 4: Convert from base 36 and subtract 1 (0-based index)
+    return parseInt(decrypted, 36) - 1;
 }
 
 // Export functions to be used in app.js
