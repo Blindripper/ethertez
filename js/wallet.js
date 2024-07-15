@@ -27,13 +27,14 @@ async function connectWallet() {
                 await switchToEtherlinkMainnet();
             }
 
-            updateWalletInfo();
+            await updateWalletInfo();
             document.getElementById('connect-wallet').textContent = 'Wallet Connected';
         } catch (error) {
             console.error('Failed to connect wallet:', error);
         }
     } else {
         console.log('Please install MetaMask!');
+        alert('Please install MetaMask to use this feature!');
     }
 }
 
@@ -69,6 +70,8 @@ async function updateWalletInfo() {
     }
 }
 
-document.getElementById('connect-wallet').addEventListener('click', connectWallet);
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('connect-wallet').addEventListener('click', connectWallet);
+});
 
-export { provider, signer };
+export { provider, signer, connectWallet };
