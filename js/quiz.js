@@ -22,6 +22,9 @@ function displayQuestion(question) {
         button.addEventListener('click', () => selectAnswer(index));
         answersDiv.appendChild(button);
     });
+    
+    // Debug: Log the correct answer
+    console.log('Correct answer index:', decryptAnswer(question.correctAnswer));
 }
 
 function selectAnswer(index) {
@@ -34,6 +37,9 @@ function selectAnswer(index) {
             button.classList.remove('selected');
         }
     });
+    
+    // Debug: Log the selected answer
+    console.log('Selected answer index:', index);
 }
 
 function checkAnswer() {
@@ -41,7 +47,14 @@ function checkAnswer() {
         alert("Please select an answer before submitting.");
         return;
     }
-    const correct = selectedAnswerIndex === decryptAnswer(currentQuestion.correctAnswer);
+    const decryptedAnswer = decryptAnswer(currentQuestion.correctAnswer);
+    const correct = selectedAnswerIndex === decryptedAnswer;
+    
+    // Debug: Log comparison details
+    console.log('Selected index:', selectedAnswerIndex);
+    console.log('Decrypted correct index:', decryptedAnswer);
+    console.log('Is correct:', correct);
+    
     if (correct) {
         score++;
         document.getElementById('score-value').textContent = score;
