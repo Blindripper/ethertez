@@ -1,1 +1,77 @@
-
+[
+  {
+    "question": "What is the native currency of Etherlink?",
+    "answers": ["ETH", "XTZ", "LINK", "BTC"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What does 'XTZ' stand for?",
+    "answers": ["Xtra Tezos", "Tezos", "Extended Tezos Zone", "X-Tezos"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is the Chain ID for Etherlink Mainnet?",
+    "answers": ["1", "42793", "56", "137"],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What technology powers Etherlink's scaling solution?",
+    "answers": ["Optimistic Rollups", "ZK Rollups", "Plasma", "Tezos Smart Rollups"],
+    "correctAnswer": 3
+  },
+  {
+    "question": "What is a Layer 2 blockchain?",
+    "answers": [
+      "The main blockchain network",
+      "A scaling solution built on top of a base blockchain",
+      "A type of cryptocurrency",
+      "A blockchain explorer"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "question": "What is the purpose of MEV protection in Etherlink?",
+    "answers": [
+      "To increase transaction speed",
+      "To reduce gas fees",
+      "To prevent front-running and other exploits",
+      "To improve block validation"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is the main advantage of a 'non-custodial' solution?",
+    "answers": [
+      "Faster transactions",
+      "Lower fees",
+      "Users maintain control of their funds",
+      "Higher security"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is the primary benefit of decentralized governance in blockchain networks?",
+    "answers": [
+      "Faster decision making",
+      "Lower operating costs",
+      "Community-driven development and upgrades",
+      "Increased privacy"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is the approximate cost per transaction on Etherlink?",
+    "answers": ["$0.01", "$0.1", "$0.001", "$1"],
+    "correctAnswer": 2
+  },
+  {
+    "question": "What is the block explorer URL for Etherlink Mainnet?",
+    "answers": [
+      "https://etherscan.io",
+      "https://bscscan.com",
+      "https://explorer.etherlink.com",
+      "https://polygonscan.com"
+    ],
+    "correctAnswer": 2
+  }
+]
